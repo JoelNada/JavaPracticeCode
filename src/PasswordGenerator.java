@@ -17,12 +17,13 @@ public class PasswordGenerator {
         password.append(LOWER.charAt(random.nextInt(LOWER.length())));
         password.append(DIGITS.charAt(random.nextInt(DIGITS.length())));
         password.append(SPECIALS.charAt(random.nextInt(SPECIALS.length())));
-
+        System.out.println(password);
         String allChars = UPPER + LOWER + DIGITS + SPECIALS;
+        System.out.println(allChars);
         for (int i = 4; i < length; i++) {
             password.append(allChars.charAt(random.nextInt(allChars.length())));
         }
-
+        System.out.println(password);
         // Shuffle characters in the StringBuilder
         for (int i = 0; i < password.length(); i++) {
             int randomIndex = random.nextInt(password.length());
@@ -36,6 +37,6 @@ public class PasswordGenerator {
 
     } public static void main(String ...args) {
 //            System.out.println(generatePasswordWithStreams(10));
-        System.out.println(generatePassword(10));
+        System.out.println(generatePassword(8));
     }
 }

@@ -30,11 +30,17 @@ class Main{
         String numStr = "Heloo6942";
         Arrays.stream(numStr.split("")).map(str->str.charAt(0)).filter(Character::isDigit).forEach(System.out::println);
 
+        //program for anagram
  String an1="listen";
  String an2 = "silent";
 
         System.out.println(Arrays.stream(an1.split("")).sorted().toList().equals(Arrays.stream(an2.split("")).sorted().toList()));
 //        System.out.println( );
+
+        String sentence2 = "My name is Joel";
+        String newReverse = Arrays.stream(sentence2.split(" ")).map(StringBuilder::new).map(StringBuilder::reverse).collect(Collectors.joining(" "));
+        System.out.println(newReverse);
+
 
     }
 
